@@ -2,6 +2,7 @@
 #And is written in Python!
 #You'll need a console that can run python to play this game right!
 #Please enjoy! (Completed February 16th, 2021)
+#Update (Feb 17 2021): I made one (1) mistake in an elif, oops. Fixed now! "Listen" should now work.
 
 #The game intro is here! This is just the entry writing, there will be a lot of this in the code.
 print("""You sigh, putting the last of the clutter away. You'd just finished cleaning the house, by now, 
@@ -927,7 +928,10 @@ You cry and ask through the door for answers that will never come.
 
 [END; REGRET]""")
 
-                                                       elif Close5 == """[LISTEN]
+                                                       elif Close5 == "LISTEN":
+                                                       
+                                                            Flag6 = True
+                                                            print("""[LISTEN]
 
 You step back as they continue to pound on the door, begging you to open it for them. 
 You hear them scream in pain and the sound of the stairs creaking under a heavy weight.
@@ -937,9 +941,7 @@ mostly silent, beyond an occasional thump from downstairs.
 
 You have better things to do than listen to it down there.
 
-[END; CONDEMN]""":
-                                                            Flag6 = True
-                                                            print("END")
+[END; CONDEMN]""")
 
                                                        else: 
                                                             Close5 = str.upper(input("Try again.\n"))
